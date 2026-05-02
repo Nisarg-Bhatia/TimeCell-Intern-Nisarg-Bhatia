@@ -1,0 +1,4 @@
+yfinance
+requests
+rich
+google-genai
