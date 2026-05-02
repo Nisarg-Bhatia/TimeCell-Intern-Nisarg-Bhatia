@@ -108,7 +108,11 @@ This task implements a CLI tool for wealth management that calculates the market
   - **Upward Trend**: The 50-day SMA crosses above the 200-day SMA.
 
   - **Downward Trend**: The 50-day SMA crosses below the 200-day SMA.
-  
+
 - **Dynamic Currency Context**: Automatically queries the asset's underlying currency (e.g., USD, INR) and displays it directly in the data table for accurate context.
 
+### Challenges
 
+**What was the hardest part, and how did I approach it?**
+- The most challenging aspect of this task was handling the unpredictable data structures returned by the `yfinance` library.By dynamically checking for and utilizing the pandas `.squeeze()` method, the script forces any complex, single-column DataFrames to flatten into a predictable 1D Series. This approach ensures that the moving average engine remains robust and crash-free regardless of how the API formats the incoming payload. 
+- Also, handling APIs and choosing a suitable free tier LLM for Task 3 was a challenge.
